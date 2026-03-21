@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'Seven';
+    src: url('/src/assets/fonts/Seven.TTF') format('truetype');
+}
+
+@font-face {
+    font-family: 'Prototype';
+    src: url('/src/assets/fonts/Prototype.ttf');
+}
+
+@font-face {
+    font-family: Sensations;
+    src: url('/src/assets/fonts/Sensations.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Le Jour Script;
+    src: url('/src/assets/fonts/Le-Jour-Script.otf') format('opentype');
+}
+
+
+
+:root {
+
+    /*COLORS*/
+    --dark-primary-color: #1976D2;
+    --light-primary-color: #BBDEFB;
+    --primary-color: #2196F3;
+    --text-color: #FFFFFF;
+    --accent-color: #00BCD4;
+    --primary-text-color: #212121;
+    --secundary-text-color: #757575;
+    --divider-color: #BDBDBD;
+
+
+    /*SIZES*/
+    --text: 25px;
+
+
+
+
+    /*FONTS*/
+    --seven: 'Seven', sans-serif;
+    --prototype: 'Prototype', sans-serif;
+    --sensations: 'Sensations', sans-serif;
+    --le_your_script: 'Le Jour Script', sans-serif;
+}

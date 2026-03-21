@@ -1,0 +1,7 @@
+@import url(var.css);
+@import url(menuBar.css);
+
+
+/*Agrega los css de cada pagina*/
+@import url(index.css);
+@import url(contacto.css);

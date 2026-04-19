@@ -4,20 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Descripción breve y precisa de la página para motores de búsqueda.">
-    <meta name="keywords" content="palabras, clave, relevantes">
+    <meta name="description" content="Página de contacto de la plantilla web moderna con Vite, Bootstrap, Font Awesome y SweetAlert2.">
+    <meta name="keywords" content="contacto, plantilla web, Vite, Bootstrap, contacto web, formulario">
     <meta name="robots" content="index, follow">
 
     <!-- Open Graph / Redes sociales -->
-    <meta property="og:title" content="Título de la Página">
-    <meta property="og:description" content="Descripción para redes sociales">
-    <meta property="og:image" content="img/imagen.jpg">
-    <meta property="og:url" content="https://www.ejemplo.com">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Contacto | Plantilla Web moderna">
+    <meta property="og:description" content="Página de contacto de la plantilla web lista para iniciar proyectos con Vite y Bootstrap.">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=Contacto+Plantilla+Web">
+    <meta property="og:url" content="https://www.example.com/contacto.html">
     <meta name="twitter:card" content="summary_large_image">
 
-    <link rel="canonical" href="https://www.ejemplo.com/">
+    <link rel="canonical" href="https://www.example.com/contacto.html">
 
-    <title>Título de la Página</title>
+    <title>Contacto | Plantilla Web</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
@@ -31,10 +32,10 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.26.24/dist/sweetalert2.all.min.js"></script>
 
     <!-- Favicons -->
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="manifest" href="site.webmanifest">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
 </head>
 
 <body>
@@ -52,6 +53,10 @@
             <h3>Artículo de ejemplo</h3>
             <p>Más contenido generado dinámicamente o estático.</p>
         </article>
+        <section class="demo-section mt-4">
+            <h3>Demostración Axios + SweetAlert</h3>
+            <button id="fetch-user" class="btn btn-primary">Cargar usuario de ejemplo</button>
+        </section>
     </main>
 
     <footer>
@@ -63,7 +68,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- JS externo -->
-    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/main.ts"></script>
 </body>
 
 </html>

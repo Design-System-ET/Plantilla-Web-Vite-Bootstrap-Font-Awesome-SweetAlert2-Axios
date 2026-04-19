@@ -7,6 +7,7 @@ Plantilla base para iniciar proyectos web rápidamente con las herramientas más
 | Tecnología                                    | Versión  | Carga | Uso                              |
 | --------------------------------------------- | -------- | ----- | -------------------------------- |
 | [Vite](https://vitejs.dev/)                   | 8.x      | npm   | Bundler y servidor de desarrollo |
+| [TypeScript](https://www.typescriptlang.org/) | 5.x      | npm   | Tipado estático y tooling        |
 | [Bootstrap](https://getbootstrap.com/)        | 5.3.8    | CDN   | Framework CSS responsive         |
 | [Font Awesome](https://fontawesome.com/)      | 6.7.2    | CDN   | Iconos vectoriales               |
 | [SweetAlert2](https://sweetalert2.github.io/) | 11.26.24 | CDN   | Alertas y modales elegantes      |
@@ -24,7 +25,7 @@ Plantilla base para iniciar proyectos web rápidamente con las herramientas más
 │   └── contacto.html           # Ejemplo de página secundaria
 │
 ├── src/                        # Código fuente
-│   ├── main.js                 # Punto de entrada JavaScript
+│   ├── main.ts                 # Punto de entrada TypeScript
 │   │
 │   ├── styles/                 # Hojas de estilo
 │   │   ├── style.css           # Hub central de imports CSS
@@ -108,7 +109,7 @@ npm run preview
 2. Crear su archivo CSS en `src/styles/nueva-pagina.css`
 3. Importar el CSS en `src/styles/style.css`:
    ```css
-   @import url(nueva-pagina.css);
+   @import "./nueva-pagina.css";
    ```
 4. Registrar la página en `vite.config.js`:
    ```js

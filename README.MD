@@ -9,6 +9,7 @@ Plantilla base para iniciar proyectos web rápidamente con las herramientas más
 | [Vite](https://vitejs.dev/)                   | 8.x      | npm   | Bundler y servidor de desarrollo |
 | [TypeScript](https://www.typescriptlang.org/) | 5.x      | npm   | Tipado estático y tooling        |
 | [Bootstrap](https://getbootstrap.com/)        | 5.3.8    | CDN   | Framework CSS responsive         |
+| [Bootstrap Icons](https://icons.getbootstrap.com/) | 1.x      | CDN   | Iconos vectoriales adicionales   |
 | [Font Awesome](https://fontawesome.com/)      | 6.7.2    | CDN   | Iconos vectoriales               |
 | [SweetAlert2](https://sweetalert2.github.io/) | 11.26.24 | CDN   | Alertas y modales elegantes      |
 | [Axios](https://axios-http.com/)              | 1.13.x   | npm   | Cliente HTTP para APIs           |
@@ -33,6 +34,8 @@ Plantilla base para iniciar proyectos web rápidamente con las herramientas más
 │   │   ├── menuBar.css         # Estilos de navegación
 │   │   ├── index.css           # Estilos página principal
 │   │   └── contacto.css        # Estilos página contacto
+│   │   └── footer.css          # Estilos para el footer
+│   │   └── tags.css            # Estilos para las principales tags
 │   │
 │   ├── assets/                 # Recursos estáticos procesados por Vite
 │   │   └── fonts/              # Fuentes personalizadas (.ttf, .otf)
@@ -159,6 +162,8 @@ Generar los favicons PNG desde `public/favicon.svg` usando [RealFaviconGenerator
 | `menuBar.css`  | Estilos de barra de navegación        |
 | `index.css`    | Estilos exclusivos de `index.html`    |
 | `contacto.css` | Estilos exclusivos de `contacto.html` |
+| `footer.css`   | Estilos del footer personalizado      |
+| `tags.css`     | Estilos para las principales tasg     |
 
 ## 🌐 SEO incluido
 
@@ -176,6 +181,7 @@ Cada página HTML viene pre-configurada con:
 | Comando           | Descripción                                  |
 | ----------------- | -------------------------------------------- |
 | `npm run dev`     | Inicia servidor de desarrollo con hot reload |
+| `npm run clean`   | Elimina la carpeta `dist/`                   |
 | `npm run build`   | Genera build de producción en `dist/`        |
 | `npm run preview` | Previsualiza el build de producción          |
 

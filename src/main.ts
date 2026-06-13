@@ -7,7 +7,6 @@ const persona1 = new Persona(1, "Claudio", "Gonzalez", 30, "claudio.gonzalez@exa
 console.log(persona1.saludar());
 
 
-
 const loadUserButton = document.querySelector<HTMLButtonElement>('#fetch-user');
 if (loadUserButton) {
     loadUserButton.addEventListener('click', async () => {

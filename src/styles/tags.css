@@ -1,0 +1,100 @@
+/*-------------------------------definiciones generales---------------------------------*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body, html{
+    height: 100%;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    
+}
+
+/*a{
+    color: var(--azul);
+    text-decoration: none;
+}*/
+
+a:hover{
+    color: var(--primary-color)
+}
+/*--------------------------------------------------------------------------------------*/
+
+
+
+
+
+/*-------------------------------comienzo a estilizar-----------------------------------*/
+header{
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+
+    background-image: url(/src/assets/Talabarteria.png);
+}
+
+main{
+    background-color: white;
+    flex: 1;
+}
+
+footer{
+    background-color: black;
+    
+    padding: 1rem 0;
+}
+
+nav{
+    position: fixed;
+    width: 95%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+/* Ensure fixed nav stays at top of viewport */
+nav{
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+
+nav:hover{
+    background-color: rgb(245, 244, 242);
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+hr{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}

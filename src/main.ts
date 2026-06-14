@@ -2,7 +2,7 @@ import axios from "axios";
 import { Persona } from "./entities/Persona";
 import "./scripts/contacto";
 
-declare const Swal: any;
+import Swal from "sweetalert2";
 
 const persona1 = new Persona(1, "Claudio", "Gonzalez", 30, "claudio.gonzalez@example.com");
 console.log(persona1.saludar());

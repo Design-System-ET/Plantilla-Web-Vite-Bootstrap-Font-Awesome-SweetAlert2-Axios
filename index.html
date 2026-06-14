@@ -13,10 +13,10 @@
     <meta property="og:title" content="Plantilla Web moderna con Vite y Bootstrap">
     <meta property="og:description" content="Plantilla web lista para comenzar con Vite, Bootstrap, Font Awesome y SweetAlert2.">
     <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=Plantilla+Web">
-    <meta property="og:url" content="https://www.example.com/">
+    <meta property="og:url" content="%VITE_SITE_URL%/">
     <meta name="twitter:card" content="summary_large_image">
 
-    <link rel="canonical" href="https://www.example.com/">
+    <link rel="canonical" href="%VITE_SITE_URL%/">
 
     <title>Plantilla Web - Vite + Bootstrap + Axios</title>
 
@@ -29,10 +29,9 @@
     <!-- Mi CSS -->
     <link rel="stylesheet" href="/src/styles/style.css">
 
-    <!-- Font Awesome y SweetAlert2 -->
+    <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.26.24/dist/sweetalert2.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.26.24/dist/sweetalert2.all.min.js"></script>
+    
 
     <!-- Favicons -->
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -97,7 +96,7 @@
         </div>
 
         <div class="d-flex justify-content-center align-items-center" >
-                <p>© 2026 Talabarteria Chuy by <a href="">Design System</a>. Todos los derechos reservados.</p>
+            <p class="footer_aling">© 2026 Talabarteria Chuy by <a href="">Design System</a> - Todos los derechos reservados.</p>
         </div>
         
     </footer>

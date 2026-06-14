@@ -8,46 +8,57 @@ Plantilla base para iniciar proyectos web rápidamente con las herramientas más
 | --------------------------------------------- | -------- | ----- | -------------------------------- |
 | [Vite](https://vitejs.dev/)                   | 8.x      | npm   | Bundler y servidor de desarrollo |
 | [TypeScript](https://www.typescriptlang.org/) | 5.x      | npm   | Tipado estático y tooling        |
+| [ESLint](https://eslint.org/)                 | 9.x      | npm   | Linter para código limpio        |
 | [Bootstrap](https://getbootstrap.com/)        | 5.3.8    | CDN   | Framework CSS responsive         |
-| [Bootstrap Icons](https://icons.getbootstrap.com/) | 1.x      | CDN   | Iconos vectoriales adicionales   |
+| [Bootstrap Icons](https://icons.getbootstrap.com/) | 1.x      | npm   | Iconos vectoriales               |
 | [Font Awesome](https://fontawesome.com/)      | 6.7.2    | CDN   | Iconos vectoriales               |
-| [SweetAlert2](https://sweetalert2.github.io/) | 11.26.24 | CDN   | Alertas y modales elegantes      |
+| [SweetAlert2](https://sweetalert2.github.io/) | 11.x     | npm   | Alertas y modales elegantes      |
 | [Axios](https://axios-http.com/)              | 1.13.x   | npm   | Cliente HTTP para APIs           |
+| [EmailJS](https://www.emailjs.com/)           | 4.x      | npm   | Envío de emails desde el cliente |
 
 ## 📁 Estructura del proyecto
 
 ```
 📦 PlantillaWeb/
 ├── index.html                  # Página principal (SEO + Open Graph)
-├── vite.config.js              # Configuración Vite (multi-page)
+├── vite.config.js              # Configuración Vite (multi-page + env vars)
+├── eslint.config.js            # Configuración ESLint para TypeScript
 ├── package.json                # Dependencias npm
+├── .env                        # Variables de entorno
 │
 ├── pages/                      # Páginas adicionales
 │   └── contacto.html           # Ejemplo de página secundaria
 │
 ├── src/                        # Código fuente
 │   ├── main.ts                 # Punto de entrada TypeScript
+│   ├── scripts/                # Scripts por página
+│   │   └── contacto.ts         # Lógica del formulario de contacto
 │   │
 │   ├── styles/                 # Hojas de estilo
 │   │   ├── style.css           # Hub central de imports CSS
 │   │   ├── var.css             # Variables CSS + @font-face
 │   │   ├── menuBar.css         # Estilos de navegación
+│   │   ├── tags.css            # Estilos para las principales tags
 │   │   ├── index.css           # Estilos página principal
-│   │   └── contacto.css        # Estilos página contacto
+│   │   ├── contacto.css        # Estilos página contacto
 │   │   └── footer.css          # Estilos para el footer
-│   │   └── tags.css            # Estilos para las principales tags
 │   │
 │   ├── assets/                 # Recursos estáticos procesados por Vite
-│   │   └── fonts/              # Fuentes personalizadas (.ttf, .otf)
+│   │   ├── css/                # CSS copiado de node_modules
+│   │   ├── fonts/              # Fuentes personalizadas (.ttf, .otf)
+│   │   └── ...                 # Imágenes del proyecto
 │   │
-│   ├── services/               # Servicios API (Axios)
-│   ├── modules/                # Módulos JS reutilizables
-│   ├── utils/                  # Funciones utilitarias
-│   └── entities/               # Modelos y entidades de datos
+│   ├── entities/               # Modelos y entidades de datos
+│   └── interfaces/             # Interfaces TypeScript
 │
 ├── public/                     # Archivos estáticos (servidos en raíz)
 │   ├── favicon.svg             # Favicon principal
-│   └── icons.svg               # Sprite de iconos SVG
+│   ├── icons.svg               # Sprite de iconos SVG
+│   ├── favicon-16x16.png       # Favicon 16px
+│   ├── favicon-32x32.png       # Favicon 32px
+│   ├── apple-touch-icon.png    # Icono iOS
+│   ├── icon-192x192.png        # Icono PWA 192px
+│   └── icon-512x512.png        # Icono PWA 512px
 │
 ├── site.webmanifest            # Manifest PWA
 ├── sitemap.xml                 # Mapa del sitio (SEO)
@@ -97,8 +108,9 @@ npm run preview
 
 ### Paso 1 — Datos del proyecto
 - Cambiar `"name"` en `package.json`
-- Actualizar `<title>`, `<meta description>`, y Open Graph en `index.html`
-- Reemplazar `TU_DOMINIO` en `robots.txt` y `sitemap.xml`
+- Editar `.env` y cambiar `VITE_SITE_URL` por tu dominio real
+- Actualizar `<title>`, `<meta description>`, y Open Graph en los HTML
+- Verificar `robots.txt` y `sitemap.xml` (usan el dominio del `.env`)
 - Actualizar datos en `site.webmanifest`
 - Modificar copyright en `LICENCE`
 
@@ -178,12 +190,15 @@ Cada página HTML viene pre-configurada con:
 
 ## 📜 Comandos disponibles
 
-| Comando           | Descripción                                  |
-| ----------------- | -------------------------------------------- |
-| `npm run dev`     | Inicia servidor de desarrollo con hot reload |
-| `npm run clean`   | Elimina la carpeta `dist/`                   |
-| `npm run build`   | Genera build de producción en `dist/`        |
-| `npm run preview` | Previsualiza el build de producción          |
+| Comando               | Descripción                                  |
+| --------------------- | -------------------------------------------- |
+| `npm run dev`         | Inicia servidor de desarrollo con hot reload |
+| `npm run build`       | Genera build de producción en `dist/`        |
+| `npm run preview`     | Previsualiza el build de producción          |
+| `npm run typecheck`   | Revisa errores de tipos TypeScript           |
+| `npm run lint`        | Revisa el código con ESLint                  |
+| `npm run clean`       | Elimina la carpeta `dist/`                   |
+| `npm run deploy`      | Despliega a GitHub Pages                     |
 
 ## 📋 Requisitos
 

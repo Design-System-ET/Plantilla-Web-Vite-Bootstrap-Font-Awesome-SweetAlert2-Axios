@@ -1,5 +1,6 @@
 import axios from "axios";
 import { Persona } from "./entities/Persona";
+import "./scripts/contacto";
 
 declare const Swal: any;
 
@@ -29,4 +30,12 @@ if (loadUserButton) {
             });
         }
     });
+}
+
+//cerramos el menú al hacer click en un enlace (para dispositivos móviles)
+const checkbox = document.querySelector<HTMLInputElement>('#menu-toggle');
+if (checkbox) {
+  document.querySelectorAll<HTMLAnchorElement>('.menu a').forEach(a => {
+    a.addEventListener('click', () => { checkbox.checked = false; });
+  });
 }

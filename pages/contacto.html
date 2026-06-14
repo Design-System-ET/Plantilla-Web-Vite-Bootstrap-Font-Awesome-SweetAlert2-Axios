@@ -4,27 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Página de contacto de la plantilla web moderna con Vite, Bootstrap, Font Awesome y SweetAlert2.">
-    <meta name="keywords" content="contacto, plantilla web, Vite, Bootstrap, contacto web, formulario">
+    <meta name="description" content="Plantilla web moderna con Vite, Bootstrap, Font Awesome y SweetAlert2. Ideal para iniciar proyectos responsivos rápidamente.">
+    <meta name="keywords" content="plantilla web, Vite, Bootstrap, Axios, SweetAlert2, Font Awesome, responsive, SPA">
     <meta name="robots" content="index, follow">
 
     <!-- Open Graph / Redes sociales -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Contacto | Plantilla Web moderna">
-    <meta property="og:description" content="Página de contacto de la plantilla web lista para iniciar proyectos con Vite y Bootstrap.">
-    <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=Contacto+Plantilla+Web">
-    <meta property="og:url" content="https://www.example.com/contacto.html">
+    <meta property="og:title" content="Plantilla Web moderna con Vite y Bootstrap">
+    <meta property="og:description" content="Plantilla web lista para comenzar con Vite, Bootstrap, Font Awesome y SweetAlert2.">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=Plantilla+Web">
+    <meta property="og:url" content="https://www.example.com/">
     <meta name="twitter:card" content="summary_large_image">
 
-    <link rel="canonical" href="https://www.example.com/contacto.html">
+    <link rel="canonical" href="https://www.example.com/">
 
-    <title>Contacto | Plantilla Web</title>
+    <title>Talabarteria Chuy</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
 
+    <!--Bootstrap Icons-->
+    <link rel="stylesheet" href="../src/assets/css/bootstrap-icons.min.css">
+
+
     <!-- Mi CSS -->
     <link rel="stylesheet" href="/src/styles/style.css">
+
+    <!--Envio de emails-->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
     <!-- Font Awesome y SweetAlert2 -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
@@ -40,27 +47,92 @@
 
 <body>
 
-    <header>
-        <h1>Bienvenido a Mi Sitio Web</h1>
+    <header id="header" class="header_contacto">
+
+        <nav class="container-fluid" aria-label="Menú principal">
+
+          
+        </nav>
+
+
     </header>
 
-    <main id="app">
+    <main>
         <section>
-            <h2>Sección de Contenido</h2>
-            <p>Contenido inicial de ejemplo.</p>
-        </section>
-        <article>
-            <h3>Artículo de ejemplo</h3>
-            <p>Más contenido generado dinámicamente o estático.</p>
-        </article>
-        <section class="demo-section mt-4">
-            <h3>Demostración Axios + SweetAlert</h3>
-            <button id="fetch-user" class="btn btn-primary">Cargar usuario de ejemplo</button>
+            <div class="formulario">
+
+                <div class="form">
+    
+                    <div class="titulo">
+                        <img src="images/logo_5.png" alt="" class="ico-form">
+    
+                        <h1>FORMULARIO DE CONTACTO</h1>
+                        <h3 class="subtitle">No dudes en comunicarte con nosotros</h3>
+    
+                    </div>
+    
+                    <form>
+                        <div class="form-group">
+                            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                        </div>
+    
+                        <div class="form-group">
+                            <input type="text" id="apellido" name="apellido" placeholder="Tu apellido" required>
+                        </div>
+    
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Tu email" required>
+                        </div>
+    
+                        <div class="form-group">
+                            <textarea id="mensaje" name="mensaje" placeholder="Tu mensaje" rows="4" required></textarea>
+                        </div>
+                        
+                        <button type="button" id="enviar" class="btn-submit">Enviar</button>
+                    </form>
+            
+                </div>
         </section>
     </main>
 
-    <footer>
-        <p>© 2026 Mi Sitio Web. Todos los derechos reservados.</p>
+    <footer class="container-fluid">
+         <div class="container-fluid d-flex justify-content-around align-items-center flex-wrap gap-4">
+
+            <div class="conte">
+                <p class="txt_footer">Contacto</p>
+                
+                <div class="d-flex gap-3">
+                    <a href="#"><i class="bi bi-whatsapp fs-4"></i></a>
+                    <a href="#"><i class="bi bi-envelope fs-4"></i></a>
+                </div>
+
+            </div>
+
+            <div class="conte">
+                <p class="txt_footer">Social</p>
+
+                <div class="d-flex gap-3">
+                    <a href="#"><i class="bi bi-facebook fs-4"></i></a>
+                    <a href="#"><i class="bi bi-instagram fs-4"></i></a>
+                    <a href="#"><i class="bi bi-linkedin fs-4"></i></a>
+                </div>
+            </div>
+
+            <div class="conte">
+                <!--
+                <p class="txt_footer">Design by</p>
+                -->
+                <div class="ico_content">
+                    <img src="/src/assets/logo_50x50.png" alt="" class="">
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-center align-items-center" >
+                <p class="footer_aling">© 2026 Talabarteria Chuy by <a href="">Design System</a> - Todos los derechos reservados.</p>
+        </div>
+        
     </footer>
 
 
